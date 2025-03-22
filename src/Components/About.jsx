@@ -1,4 +1,3 @@
-import Navigation from './Components/Navigation'
 import '../styles/PortfolioStyles.css'
 
 function About() {
@@ -6,7 +5,7 @@ function About() {
   return (
     <>
       <main>
-        <Navigation></Navigation>
+        <h1>This is the about page</h1>
       </main>
     </>
   )
