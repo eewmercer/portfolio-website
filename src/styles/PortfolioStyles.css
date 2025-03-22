@@ -154,20 +154,6 @@
   }
 }
 
-@media (min-width: 768px) {
-  .button-74 {
-    min-width: 120px;
-    padding: 0 25px;
-  }
-}
-
-@media (min-width: 768px) {
-  .button-74 {
-    min-width: 120px;
-    padding: 0 25px;
-  }
-}
-
 .exp--digital-corps {
   display: flex;
   flex-direction: column;
@@ -272,4 +258,15 @@
   img {
     width: 60%;
   }
+}
+
+.link {
+  text-decoration: none;
+  color: #6C493F;
+  border: 2px solid #6C493F;
+  border-radius: 5px;
+  font-size: 25px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
