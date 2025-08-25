@@ -73,6 +73,7 @@ function Projects() {
               various hooks within React. The site itself is deployed on GitHub pages, and it's
               source code can be viewed directly through GitHub.
             </p>
+            <a target='_blank' href='https://github.com/eewmercer/portfolio-website' className='link'>GitHub</a>
           </div>
           <img src={profile} />
         </section>
@@ -86,6 +87,7 @@ function Projects() {
               add to or delete from the database. The source code for this project is found in 
               GitHub.
             </p>
+            <a target='_blank' href='https://github.com/eewmercer/cupcake_site_node.js' className='link'>GitHub</a>
           </div>
           <div className='proj--images-cupcake'>
             <div className='xtra-images'>
