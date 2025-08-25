@@ -21,7 +21,8 @@ function Experience(props) {
           <img src={descBubbles2} className='bubbles-desc-2'/>
         </section>
 
-        <section className='exp--work'>
+        <section className='exp--work-section'>
+          <section className='exp--work'>
             <img src={bubbleBullet} className='bubble-size'/>
             <div className='work'>
               <h2>Genesys: </h2>
@@ -31,7 +32,7 @@ function Experience(props) {
                 feature implementations, or a hackathon event, this internship was extremely 
                 insightful. The main languages and tools used included observability frameworks such as OpenTelemetry, 
                 New Relic, languages like Java and TypeScript, and deployment tools such as Jenkins.
-                 I am currently employed as a part-time intern, and will continue working
+                I am currently employed as a part-time intern, and will continue working
                 with my team throughout my senior year at Ball State University. </p>
                 <div className='genesys-tools'>
                   <img src={oTel} />
@@ -41,7 +42,6 @@ function Experience(props) {
             </div>
           </section>
 
-        <section className='exp--work-section'>
           <section className='exp--digital-corps'>
             <div className='exp--work'>
               <img src={bubbleBullet} className='bubble-size'/>
