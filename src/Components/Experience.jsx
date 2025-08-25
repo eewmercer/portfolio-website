@@ -3,6 +3,9 @@ import '../styles/PortfolioStyles.css'
 import descBubbles1 from "/Bubbles_2.png"
 import descBubbles2 from "/Bubbles_3.png"
 import bubbleBullet from "/bubbles_bullets.png"
+import oTel from "/otel.png"
+import newRelic from "/newRelic.png"
+import jenkins from "/jenkins.jpeg"
 // import projectButton from "/view_projects.svg"
 import Projects from './Projects'
 
@@ -17,6 +20,26 @@ function Experience(props) {
           <h1>WORK EXPERIENCE</h1>
           <img src={descBubbles2} className='bubbles-desc-2'/>
         </section>
+
+        <section className='exp--work'>
+            <img src={bubbleBullet} className='bubble-size'/>
+            <div className='work'>
+              <h2>Genesys: </h2>
+              <p>Worked alongside a team of developers as a software development intern. 
+                I was privileged to be able to learn a large number of new technologies and services, 
+                as well as deploy to real-world environments utilizing pipelines. Whether working on projects, 
+                feature implementations, or a hackathon event, this internship was extremely 
+                insightful. The main languages and tools used included observability frameworks such as OpenTelemetry, 
+                New Relic, languages like Java and TypeScript, and deployment tools such as Jenkins.
+                 I am currently employed as a part-time intern, and will continue working
+                with my team throughout my senior year at Ball State University. </p>
+                <div className='genesys-tools'>
+                  <img src={oTel} />
+                  <img src={newRelic} />
+                  <img src={jenkins} />
+                </div>
+            </div>
+          </section>
 
         <section className='exp--work-section'>
           <section className='exp--digital-corps'>
