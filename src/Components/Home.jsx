@@ -19,8 +19,8 @@ function Home() {
         </section>
         <section className='home--description'>
           <img src={descBubbles1} className='bubbles-desc-1'/>
-          <p>Currently an undergraduate at Ball State University, 
-            I am pursuing a BS in Computer Science 
+          <p>Previously an undergraduate at Ball State University, 
+            I pursued a BS in Computer Science 
             with a concentration in Web and Mobile 
             App Development and a minor in 
             Computer Information and Technology.</p>

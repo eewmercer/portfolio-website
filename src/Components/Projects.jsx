@@ -13,90 +13,264 @@ import database from "/database.png"
 import home from "/homePage.png"
 
 function Projects() {
- 
   return (
     <>
-      <main className='exp--main'>
-        <section className='exp--intro'>
+      <main className='projects--main'>
+
+        {/* PAGE HEADER */}
+        <section className='projects--intro'>
           <img src={descBubbles1} className='bubbles-desc-1'/>
-          <h1>PROJECTS</h1>
+
+          <div>
+            <p className='projects--eyebrow'>WHAT I'VE BUILT</p>
+            <h1>PROJECTS</h1>
+            <p className='projects--subtitle'>
+              A collection of projects I've worked on through school,
+              professional experience, and my own development.
+            </p>
+          </div>
+
           <img src={descBubbles2} className='bubbles-desc-2'/>
         </section>
 
-        <section className='proj--container'>
-          <div>
-            <h2>Ball State Herbarium Website:</h2>
-            <p>	As a developer at the Digital Corps, I have been given the 
-              opportunity to create projects for various local businesses and 
-              directly work with various Ball State University departments. Ball 
-              State University’s biology department made a request to the Digital 
-              Corps for a website that would contain all the current and previous 
-              plant data that have been collected through the years. This produced 
-              the Herbarium Database, a website that I have been working on for a 
-              year. I collaborated with various development team members and 
-              contributed to the production of this website by creating the frontend 
-              as well as pulling data from the backend through requesting and writing 
-              to an API that connected with the database that containerized the plant 
-              data. I created the frontend of this website with React.js, JavaScript, 
-              HTML, and Sass. The backend was containerized using Docker. </p>
-          </div>
-          <div className='proj--images-herbarium'>
-            <img src={dashboard}/>
-            <img src={activity}/>
-            <img src={add}/>
-            <img src={exportPage}/>
-          </div>
-        </section>
 
-        <section className='proj--container'>
-          <div>
-            <h2>MyBallState Dining Hours Widget:</h2>
-            <p>One of the first projects I worked on at the Digital Corps included a 
-              widget for Ball State's dining schedule. Each food court contains various 
-              restaurants and available food options, all while having different hours of 
-              operation. My job was to create a widget to pull data from an API
-              and connect it with the frontend. This widget was create with React, JS, HTML, 
-              and CSS.
-            </p>
-          </div>
-          <div className='proj--images-bsu'>
-            <img src={start}/>
-            <img src={end}/>
-          </div>
-        </section>
+        {/* HERBARIUM */}
+        <section className='project-card featured-project'>
 
-        <section className='proj--container'>
-          <div>
-            <h2>Portfolio Website:</h2>
-            <p>The website your scrolling through right now was programmed by yours truly! 
-              I created it as a React/Vite application using JS, HTML, and CSS, and utilized
-              various hooks within React. The site itself is deployed on GitHub pages, and it's
-              source code can be viewed directly through GitHub.
-            </p>
-            <a target='_blank' href='https://github.com/eewmercer/portfolio-website' className='link'>GitHub</a>
-          </div>
-          <img src={profile} />
-        </section>
+          <div className='project-number'>01</div>
 
-        <section className='proj--container'>
-          <div>
-            <h2>Cupcake Database:</h2>
-            <p>This project included the use of Node.js, MongoDB, Express, EJS, and JS to 
-              produce a user login system and database. A user can sign up with an account,
-              login, and then view the current cupcakes listed in the database; they can also 
-              add to or delete from the database. The source code for this project is found in 
-              GitHub.
-            </p>
-            <a target='_blank' href='https://github.com/eewmercer/cupcake_site_node.js' className='link'>GitHub</a>
-          </div>
-          <div className='proj--images-cupcake'>
-            <div className='xtra-images'>
-              <img src={login}/>
-              <img src={home}/>
+          <div className='project-content'>
+
+            <div className='project-header'>
+              <div>
+                <p className='project-type'>WEB APPLICATION</p>
+                <h2>Ball State Herbarium</h2>
+              </div>
+
+              <span className='project-label'>
+                Digital Corps
+              </span>
             </div>
-            <img src={database}/>
+
+            <p className='project-summary'>
+              A full-stack web application created for Ball State University's
+              biology department to manage and explore decades of collected
+              plant data. I contributed heavily to the frontend while working
+              with backend APIs and a containerized database.
+            </p>
+
+            <div className='project-highlights'>
+
+              <div>
+                <span>01</span>
+                <h3>Frontend</h3>
+                <p>
+                  Built responsive interfaces using React, JavaScript,
+                  HTML, and Sass.
+                </p>
+              </div>
+
+              <div>
+                <span>02</span>
+                <h3>API Integration</h3>
+                <p>
+                  Connected the frontend to backend APIs to retrieve,
+                  filter, and export plant data.
+                </p>
+              </div>
+
+              <div>
+                <span>03</span>
+                <h3>Collaboration</h3>
+                <p>
+                  Worked with development team members and Ball State
+                  stakeholders throughout development.
+                </p>
+              </div>
+
+            </div>
+
+            <div className='project-tools'>
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>Sass</span>
+              <span>APIs</span>
+              <span>Docker</span>
+            </div>
+
+            <div className='project-gallery herbarium-gallery'>
+              <img src={dashboard}/>
+              <img src={activity}/>
+              <img src={add}/>
+              <img src={exportPage}/>
+            </div>
+
           </div>
         </section>
+
+
+        {/* DINING WIDGET */}
+        <section className='project-card'>
+
+          <div className='project-number'>02</div>
+
+          <div className='project-content'>
+
+            <div className='project-header'>
+              <div>
+                <p className='project-type'>WEB WIDGET</p>
+                <h2>MyBallState Dining Hours</h2>
+              </div>
+
+              <span className='project-label'>
+                Digital Corps
+              </span>
+            </div>
+
+            <p className='project-summary'>
+              An interactive dining schedule widget created for Ball State's
+              MyBallState website. The widget pulls dining information from
+              an API and presents restaurant hours in an easy-to-use interface.
+            </p>
+
+            <div className='project-tools'>
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>APIs</span>
+              <span>JSON</span>
+            </div>
+
+            <div className='project-gallery dining-gallery'>
+              <img src={start}/>
+              <img src={end}/>
+            </div>
+
+          </div>
+        </section>
+
+
+        {/* PORTFOLIO */}
+        <section className='project-card'>
+
+          <div className='project-number'>03</div>
+
+          <div className='project-content'>
+
+            <div className='project-header'>
+              <div>
+                <p className='project-type'>PERSONAL PROJECT</p>
+                <h2>Portfolio Website</h2>
+              </div>
+
+              <span className='project-label'>
+                You're here!
+              </span>
+            </div>
+
+            <div className='portfolio-project-layout'>
+
+              <div>
+                <p className='project-summary'>
+                  The website you're scrolling through right now! I designed
+                  and developed this portfolio as a React/Vite application
+                  to showcase my work, experience, and development skills.
+                </p>
+
+                <div className='project-tools'>
+                  <span>React</span>
+                  <span>Vite</span>
+                  <span>JavaScript</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                </div>
+
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  href='https://github.com/eewmercer/portfolio-website'
+                  className='project-link'
+                >
+                  View on GitHub →
+                </a>
+              </div>
+
+              <img
+                src={profile}
+                className='portfolio-project-image'
+              />
+
+            </div>
+
+          </div>
+        </section>
+
+
+        {/* CUPCAKE DATABASE */}
+        <section className='project-card'>
+
+          <div className='project-number'>04</div>
+
+          <div className='project-content'>
+
+            <div className='project-header'>
+              <div>
+                <p className='project-type'>FULL-STACK APPLICATION</p>
+                <h2>Cupcake Database</h2>
+              </div>
+
+              <span className='project-label'>
+                School Project
+              </span>
+            </div>
+
+            <p className='project-summary'>
+              A full-stack application featuring user authentication and
+              a database-driven cupcake inventory. Users can create accounts,
+              log in, view cupcakes, and add or remove items from the database.
+            </p>
+
+            <div className='project-tools'>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MongoDB</span>
+              <span>Mongoose</span>
+              <span>EJS</span>
+              <span>JavaScript</span>
+            </div>
+
+            <div className='cupcake-gallery'>
+
+              <div className='cupcake-small-images'>
+                <img src={login}/>
+                <img src={home}/>
+              </div>
+
+              <img src={database}/>
+
+            </div>
+
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://github.com/eewmercer/cupcake_site_node.js'
+              className='project-link'
+            >
+              View on GitHub →
+            </a>
+
+          </div>
+        </section>
+
+
+        {/* ENDING */}
+        <section className='projects-ending'>
+          <p>More projects coming soon...</p>
+          <span>✦</span>
+        </section>
+
       </main>
     </>
   )

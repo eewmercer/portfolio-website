@@ -1,95 +1,230 @@
-import { useState } from 'react'
 import '../styles/PortfolioStyles.css'
 import descBubbles1 from "/Bubbles_2.png"
 import descBubbles2 from "/Bubbles_3.png"
-import bubbleBullet from "/bubbles_bullets.png"
 import oTel from "/otel.png"
 import newRelic from "/newRelic.png"
 import jenkins from "/jenkins.jpeg"
-// import projectButton from "/view_projects.svg"
 import Projects from './Projects'
 
 function Experience(props) {
- 
-  console.log(props.showProjects)
   return (
     <>
-      {!props.showProjects && <main className='exp--main'>
-        <section className='exp--intro'>
-          <img src={descBubbles1} className='bubbles-desc-1'/>
-          <h1>WORK EXPERIENCE</h1>
-          <img src={descBubbles2} className='bubbles-desc-2'/>
-        </section>
+      {!props.showProjects && (
+        <main className='exp--main'>
 
-        <section className='exp--work-section'>
-          <section className='exp--work'>
-            <img src={bubbleBullet} className='bubble-size'/>
-            <div className='work'>
-              <h2>Genesys: </h2>
-              <p>Worked alongside a team of developers as a software development intern. 
-                I was privileged to be able to learn a large number of new technologies and services, 
-                as well as deploy to real-world environments utilizing pipelines. Whether working on projects, 
-                feature implementations, or a hackathon event, this internship was extremely 
-                insightful. The main languages and tools used included observability frameworks such as OpenTelemetry, 
-                New Relic, languages like Java and TypeScript, and deployment tools such as Jenkins.
-                I am currently employed as a part-time intern, and will continue working
-                with my team throughout my senior year at Ball State University. </p>
+          {/* Page heading */}
+          <section className='exp--intro'>
+            <img src={descBubbles1} className='bubbles-desc-1'/>
+            <div>
+              <p className='exp--eyebrow'>MY JOURNEY</p>
+              <h1>WORK EXPERIENCE</h1>
+              <p className='exp--subtitle'>
+                A collection of places I've learned, built, collaborated,
+                and grown as a developer.
+              </p>
+            </div>
+            <img src={descBubbles2} className='bubbles-desc-2'/>
+          </section>
+
+
+          {/* Experience timeline */}
+          <section className='experience-timeline'>
+
+            {/* Genesys */}
+            <article className='experience-card genesys-card'>
+
+              <div className='experience-number'>01</div>
+
+              <div className='experience-card-content'>
+
+                <div className='experience-header'>
+                  <div>
+                    <p className='experience-type'>SOFTWARE DEVELOPMENT</p>
+                    <h2>Genesys</h2>
+                  </div>
+
+                  <span className='experience-date'>
+                    Current · Part-Time
+                  </span>
+                </div>
+
+                <p className='experience-summary'>
+                  Building software alongside experienced developers while
+                  working with real-world applications, deployment pipelines,
+                  and observability systems.
+                </p>
+
+                <div className='experience-highlights'>
+
+                  <div className='highlight'>
+                    <span>01</span>
+                    <h3>Development</h3>
+                    <p>
+                      Contributed to projects and feature implementations
+                      using Java.
+                    </p>
+                  </div>
+
+                  <div className='highlight'>
+                    <span>02</span>
+                    <h3>Observability</h3>
+                    <p>
+                      Worked with OpenTelemetry and New Relic to understand
+                      application behavior and performance.
+                    </p>
+                  </div>
+
+                  <div className='highlight'>
+                    <span>03</span>
+                    <h3>Deployment</h3>
+                    <p>
+                      Gained experience with Jenkins and real-world
+                      development pipelines.
+                    </p>
+                  </div>
+
+                </div>
+
+                <div className='experience-tools'>
+                  <span>Java</span>
+                  <span>TypeScript</span>
+                  <span>OpenTelemetry</span>
+                  <span>New Relic</span>
+                  <span>Jenkins</span>
+                </div>
+
                 <div className='genesys-tools'>
                   <img src={oTel} />
                   <img src={newRelic} />
                   <img src={jenkins} />
                 </div>
-            </div>
-          </section>
 
-          <section className='exp--digital-corps'>
-            <div className='exp--work'>
-              <img src={bubbleBullet} className='bubble-size'/>
-              <div className='work'>
-                <h2>Digital Corps: </h2>
-                <p>Built Web Apps for Ball State University, as well as Muncie businesses, 
-                  utilizing various programming tools and languages including React.js, JavaScript, HTML, 
-                  CSS, Sass, API requests, and JSON file implementation.
-                  Engaged with clients to understand their requirements for websites and applications, 
-                  managing timelines, and collaborating effectively to ensure project completion.
-                  Collaborated with various specialization teams such as Video, Communication, Design, 
-                  and Project Management groups.</p>
               </div>
-            </div>
+            </article>
 
-            {/* <div className='project-button-container'>
-              <button onClick={() => props.setShowProjects('hi')}>View <br />Projects</button>
-              <img src={projectButton} className='project-button'/>
-            </div>   */}
+
+            {/* Digital Corps */}
+            <article className='experience-card digital-card'>
+
+              <div className='experience-number'>02</div>
+
+              <div className='experience-card-content'>
+
+                <div className='experience-header'>
+                  <div>
+                    <p className='experience-type'>WEB DEVELOPMENT</p>
+                    <h2>Digital Corps</h2>
+                  </div>
+
+                  <span className='experience-date'>
+                    Ball State University
+                  </span>
+                </div>
+
+                <p className='experience-summary'>
+                  Creating web applications for Ball State University and
+                  local businesses while working directly with clients and
+                  multidisciplinary teams.
+                </p>
+
+                <div className='experience-stats'>
+                  <div>
+                    <strong>React</strong>
+                    <span>Frontend</span>
+                  </div>
+
+                  <div>
+                    <strong>APIs</strong>
+                    <span>Data</span>
+                  </div>
+
+                  <div>
+                    <strong>Teams</strong>
+                    <span>Collaboration</span>
+                  </div>
+                </div>
+
+                <div className='experience-tools'>
+                  <span>React</span>
+                  <span>JavaScript</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Sass</span>
+                  <span>APIs</span>
+                  <span>JSON</span>
+                </div>
+
+              </div>
+            </article>
+
+
+            {/* Office Depot */}
+            <article className='experience-card smaller-card'>
+
+              <div className='experience-number'>03</div>
+
+              <div className='experience-card-content'>
+
+                <div className='experience-header'>
+                  <div>
+                    <p className='experience-type'>CUSTOMER EXPERIENCE</p>
+                    <h2>Office Depot</h2>
+                  </div>
+                </div>
+
+                <div className='compact-highlights'>
+                  <span>Technology consultation</span>
+                  <span>Customer relationships</span>
+                  <span>Team coordination</span>
+                  <span>Print services</span>
+                </div>
+
+              </div>
+            </article>
+
+
+            {/* Culver's */}
+            <article className='experience-card smaller-card'>
+
+              <div className='experience-number'>04</div>
+
+              <div className='experience-card-content'>
+
+                <div className='experience-header'>
+                  <div>
+                    <p className='experience-type'>CUSTOMER SERVICE</p>
+                    <h2>Culver's</h2>
+                  </div>
+                </div>
+
+                <div className='compact-highlights'>
+                  <span>Communication</span>
+                  <span>Conflict resolution</span>
+                  <span>Multitasking</span>
+                  <span>Team leadership</span>
+                </div>
+
+              </div>
+            </article>
+
           </section>
 
-          <section className='exp--work'>
-            <img src={bubbleBullet} className='bubble-size'/>
-            <div className='work'>
-              <h2>Office Depot: </h2>
-              <p>Used active listening and relationship-building skills to assess customer 
-                needs relating to technology products, build rapport, and connect with viable solutions.
-                Coordinated team efforts and streamlined processes in a print shop setting, enhancing order 
-                management and facilitating smooth transitions between tasks.</p>
-            </div>
+
+          {/* Transition to projects */}
+          <section className='experience-ending'>
+            <p>Want to see what I've built?</p>
+
+            <button
+              onClick={() => props.setShowProjects(true)}
+            >
+              Explore My Projects →
+            </button>
           </section>
 
-          <section className='exp--work'>
-            <img src={bubbleBullet} className='bubble-size'/>
-            <div className='work'>
-              <h2>Culver's: </h2>
-              <p>Utilized strong communication skills to resolve conflicts with dissatisfied customers, 
-                ensuring that they left the establishment feeling valued and satisfied.
-                Gained extensive multitasking experience by operating effectively in a low-staffing 
-                environment, demonstrating flexibility by managing multiple stations while concurrently 
-                delegating tasks to team members.</p>
-            </div>
-          </section>
-        </section>
-      </main>}
+        </main>
+      )}
 
       {props.showProjects !== false ? <Projects /> : null}
-
     </>
   )
 }
